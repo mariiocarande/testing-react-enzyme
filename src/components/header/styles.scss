@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  height: 10000px;
+  background: steelblue;
+
+  .wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+  }
+
+  .logo{
+    display: flex;
+    height: 80px;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    background: beige;
+    margin-block-end: auto;
+    
+    img {
+      display: flex;
+      height: 100px;
+    }
+
+    h3 {
+      display: flex;
+      padding: 20px;
+    }
+  }
+}

@@ -1,13 +1,13 @@
 import React from 'react';
 
+import Header from './components/header/index';
+
 function App() {
   return (
     <div>
-      <header>
-        <p>
-          Test
-        </p>
-      </header>
+      <Header
+        name="Test"
+      />
     </div>
   );
 }
