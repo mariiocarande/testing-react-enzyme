@@ -1,20 +1,31 @@
 import React from 'react';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-import Enzyme, { shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
+import '../../setupTest';
 import Header from './index';
+import { findByTestAttr } from '../utils/index';
 
-Enzyme.configure({
-  adapter: new EnzymeAdapter(),
-  disableLifecycleMethods: true,
-})
+const setUp = (props = {}) => {
+  const component = shallow(<Header {...props} />);
+  return component;
+}
 
 describe('Header Component', () => {
 
+  let component;
+  beforeEach(() => {
+    component = setUp();
+  });
+
   it('It should render without errors', () => {
-    const component = shallow(<Header />);
-    console.log(component.debug);
-    const wrapper = component.find('.headerComponent');
+    // console.log(component.debug());
+    const wrapper = findByTestAttr(component, 'headerComponent');
     expect(wrapper.length).toBe(1);
+  })
+
+  it('Should render the logo', () => {
+    // console.log(component.debug());
+    const logo = findByTestAttr(component, 'logoIMG');
+    expect(logo.length).toBe(1);
   })
 })

@@ -1,5 +1,18 @@
 body {
   margin: 0;
+  font-family: 'Lilita One', cursive;
+  font-size: 40px;
+  line-height: 22px;
+  color:  #121212;
   padding: 0;
   background: #707174;
+}
+
+.main {
+  width: 100%;
+    font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  max-width: 980px;
+  margin: 50px auto 80px;
+  padding: 0 10px;
 }
