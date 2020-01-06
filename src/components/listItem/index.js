@@ -14,9 +14,9 @@ class ListItem extends Component {
         <h2 data-test="componentTitle">
           {title}
         </h2>
-        <p data-test="componentDesc">
+        <div data-test="componentDesc">
           {desc}
-        </p>
+        </div>
       </div>
     );
   }
